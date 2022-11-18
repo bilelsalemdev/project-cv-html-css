@@ -2,9 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 header {
-  background-image: url("jake-weirick-Q_RBVFFXR_g-unsplash.jpg");
+  background-image: url("imgs/jake-weirick-Q_RBVFFXR_g-unsplash.jpg");
   height: 10vh;
   object-fit: cover;
   color: white;
@@ -19,6 +20,7 @@ header {
   margin: 3rem;
   padding: 2rem;
   background-color: rgba(220, 220, 220, 0.686);
+  box-shadow: 0 0.5rem 2rem 1rem rgba(0, 0, 0, 0.2);
 }
 .my-img {
   text-align: center;
@@ -37,12 +39,167 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 .left-part {
-  padding: 2rem;
+  padding-right: 3rem;
   max-width: 30rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.left-part h1 {
+  margin-bottom: 1rem;
+}
+.left-part p {
+  margin-bottom: 1rem;
+}
+.left-part button {
+  background-color: orange;
+  padding: 1rem 2rem;
+  border: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.left-part button:hover {
+  transform: translateY(-0.3rem);
+}
+.left-part button:active {
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0.1rem);
+}
+.right-part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+.right-part .grid {
+  display: grid;
+  grid:
+    "labels labels inforamtion information"
+    "icons icons icons icons";
+  column-gap: 1rem;
+  padding: 1rem;
+  justify-items: center;
   align-items: center;
 }
-.left-part {
+.right-part .grid .social-icons {
+  grid-area: icons;
+}
+.right-part .grid .social-icons ion-icon {
+  margin-right: 3rem;
+  font-size: 2rem;
+}
+.right-part .grid .social-icons ion-icon:first-of-type {
+  color: #0165e1;
+}
+.right-part .grid .social-icons ion-icon:nth-of-type(2) {
+  color: #1da1f2;
+}
+.right-part .grid .social-icons ion-icon:nth-of-type(3) {
+  color: #0077b5;
+}
+.right-part .grid .social-icons ion-icon:nth-of-type(4) {
+  color: #ff0000;
+}
+.right-part .grid .right-grid {
+  grid-area: information;
+}
+.right-part .grid .right-grid ul {
+  list-style: none;
+}
+.right-part .grid .right-grid ul li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.right-part .grid .left-grid {
+  grid-area: labels;
+}
+.right-part .grid .left-grid ul {
+  list-style: none;
+}
+.right-part .grid .left-grid ul li {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.education .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+.education .grid img {
+  margin-bottom: 2rem;
+}
+.certifications {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+.compétences h1 {
+  margin-bottom: 2rem;
+}
+.compétences .professionnelles {
+  display: flex;
+  justify-content: space-around;
+}
+.compétences .professionnelles img {
+  height: 3rem;
+}
+.compétences .personnelles {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.compétences .personnelles .personal-skill {
+  margin-bottom: 1rem;
+}
+.compétences .personnelles .personal-skill + div {
+  width: 100%;
+  height: 2rem;
+
+  margin-bottom: 1rem;
+}
+.compétences .personnelles .personal-skill + .percentage1 {
+  background-image: linear-gradient(to right, rgb(15, 214, 111) 90%, gray 10%);
+}
+.compétences .personnelles .personal-skill + .percentage2 {
+  background-image: linear-gradient(to right, rgb(15, 214, 111) 60%, gray 40%);
+}
+.compétences .personnelles .personal-skill + .percentage3 {
+  background-image: linear-gradient(to right, rgb(15, 214, 111) 55%, gray 45%);
+}
+.compétences .personnelles .personal-skill + .percentage4 {
+  background-image: linear-gradient(
+    to right,
+    rgb(15, 214, 111) 40%,
+    gray 40%,
+    gray 100%
+  );
+}
+
+.centres-interet {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.centres-interet .img {
+  display: flex;
+  margin: 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.centres-interet .home {
+  margin-right: 1rem;
+  margin-left: 1.5rem;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(220, 220, 220, 0.686);
+  padding: 3rem;
+  box-shadow: 0 -1rem 2rem 1rem rgba(0, 0, 0, 0.2);
 }
